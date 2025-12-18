@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<title>Sicurezza sul Lavoro – Lavoro Scolastico</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(#f4f6f9, #e3e6f3);
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #3949ab, #1a237e);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+nav {
+    background: #5c6bc0;
+    padding: 12px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: #fffde7;
+    margin: 0 14px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+}
+
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 30px;
+}
+
+h2 {
+    color: #303f9f;
+    border-bottom: 3px solid #c5cae9;
+    padding-bottom: 6px;
+}
+
+h3 {
+    color: #3949ab;
+}
+
+.box {
+    background: #ffffff;
+    padding: 22px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.event {
+    cursor: pointer;
+    margin: 12px 0;
+    font-weight: bold;
+    color: #1a237e;
+}
+
+.fact {
+    background: #e8eaf6;
+    padding: 12px;
+    margin-top: 8px;
+    border-left: 5px solid #3f51b5;
+}
+
+.hidden {
+    display: none;
+}
+
+.quiz {
+    background: #fce4ec;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.quiz button {
+    margin: 6px;
+    padding: 9px 16px;
+    background: #d81b60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.quiz button:hover {
+    background: #ad1457;
+}
+
+footer {
+    background: #303f9f;
+    color: #fffde7;
+    text-align: center;
+    padding: 18px;
+}
+
+strong {
+    color: #d32f2f;
+}
+
+.img-box {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.img-box img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🦺 Sicurezza sul Lavoro</h1>
+    <p>Lavoro scolastico – Educazione civica / Tecnologia</p>
+</header>
+
+<nav>
+    <a href="#introduzione">Introduzione</a>
+    <a href="#normativa">Normativa</a>
+    <a href="#interattiva">Parte interattiva</a>
+    <a href="#teorica">Parte teorica</a>
+    <a href="#quiz">Quiz finale</a>
+    <a href="#conclusione">Conclusione</a>
+</nav>
+
+<section id="introduzione">
+    <h2>Introduzione</h2>
+    <div class="box">
+        <p>
+            La <strong>sicurezza sul lavoro</strong> riguarda tutte le misure adottate
+            per proteggere la salute e la sicurezza dei lavoratori.
+            L’obiettivo principale è prevenire <strong>infortuni</strong> e
+            <strong>malattie professionali</strong>.
+        </p>
+        <div class="img-box">
+            <img src="segnale sicurezza.png" alt="Segnale sicurezza">
+        </div>
+    </div>
+</section>
+
+<section id="normativa">
+    <h2>Normativa di riferimento</h2>
+    <div class="box">
+        <div class="event" onclick="toggle('n1')">📜 D.Lgs. 81/2008</div>
+        <div id="n1" class="hidden fact">
+            È il Testo Unico sulla Sicurezza sul Lavoro e stabilisce diritti
+            e doveri di datori di lavoro e lavoratori.
+        </div>
+
+        <div class="event" onclick="toggle('n2')">🏛️ Costituzione Italiana</div>
+        <div id="n2" class="hidden fact">
+            L’articolo 32 tutela la salute come diritto fondamentale.
+        </div>
+    </div>
+</section>
+
+<section id="interattiva">
+    <h2>Parte interattiva</h2>
+    <div class="box quiz">
+        <p><strong>Perché è importante rispettare le norme di sicurezza?</strong></p>
+        <button onclick="risposta(true)">Per evitare incidenti</button>
+        <button onclick="risposta(false)">Per perdere tempo</button>
+        <p id="feedback"></p>
+    </div>
+</section>
+
+<section id="teorica">
+    <h2>Rischi e Pericoli sul Lavoro</h2>
+
+    <div class="box">
+        <h3>Differenza tra pericolo e rischio</h3>
+        <p>
+            Il <strong>pericolo</strong> è una fonte di possibile danno,
+            mentre il <strong>rischio</strong> è la probabilità che il pericolo
+            provochi un danno e la gravità di tale danno.
+        </p>
+        <div class="img-box">
+            <img src="icona rischio.png" alt="Icona rischio">
+        </div>
+    </div>
+
+    <div class="box">
+        <h3>⚙️ Rischi fisici</h3>
+        <p>
+            Sono legati a fattori ambientali come <strong>rumore</strong>,
+            <strong>vibrazioni</strong>, temperature estreme e illuminazione
+            non adeguata.
+        </p>
+        <div class="img-box">
+            <img src="protezione udito.jpg" alt="Protezione udito">
+        </div>
+    </div>
+
+    <div class="box">
+        <h3>🧪 Rischi chimici</h3>
+        <p>
+            Derivano dall’esposizione a gas, vapori, polveri e sostanze tossiche
+            che possono causare intossicazioni e problemi respiratori.
+        </p>
+        <div class="img-box">
+            <img src="rischi chimici.png" alt="Rischi chimici">
+        </div>
+    </div>
+
+    <div class="box">
+        <h3>🦠 Rischi biologici</h3>
+        <p>
+            Sono causati da virus, batteri e altri microrganismi presenti in
+            ambienti come ospedali, laboratori e scuole.
+        </p>
+        <div class="img-box">
+            <img src="rischi biologici.jpg" alt="Rischi biologici">
+        </div>
+    </div>
+
+    <div class="box">
+        <h3>🧠 Rischi psicosociali</h3>
+        <p>
+            Riguardano lo stress, il carico di lavoro eccessivo, i turni
+            prolungati e il benessere psicologico del lavoratore.
+        </p>
+        <div class="img-box">
+            <img src="stress sul lavoro .jpg" alt="Stress lavoro">
+        </div>
+    </div>
+
+    <div class="box">
+        <h3>⚡ Rischi meccanici ed elettrici</h3>
+        <p>
+            Sono legati all’uso di macchinari e impianti elettrici non sicuri,
+            che possono causare infortuni anche gravi.
+        </p>
+        <div class="img-box">
+            <img src="elettricipng.png" alt="Rischi elettrici">
+        </div>
+    </div>
+
+    <div class="box">
+        <h3>🦺 Prevenzione e DPI</h3>
+        <p>
+            La prevenzione si basa sull’uso dei <strong>DPI</strong>,
+            sul rispetto delle regole e sulla formazione dei lavoratori.
+        </p>
+        <div class="img-box">
+            <img src="prevenzione.png" alt="DPI casco">
+        </div>
+    </div>
+</section>
+
+<section id="quiz">
+    <h2>Quiz finale</h2>
+    <div class="box quiz">
+        <p><strong>1. Qual è la differenza tra pericolo e rischio?</strong></p>
+        <button onclick="quizRisposta(this,true)">Il pericolo è una fonte di danno, il rischio è la probabilità di danno</button>
+        <button onclick="quizRisposta(this,false)">Il rischio è la fonte di danno, il pericolo è la probabilità</button>
+
+        <p><strong>2. Quale DPI serve per proteggere le mani?</strong></p>
+        <button onclick="quizRisposta(this,true)">Guanti</button>
+        <button onclick="quizRisposta(this,false)">Casco</button>
+
+        <p><strong>3. Quale rischio riguarda batteri e virus?</strong></p>
+        <button onclick="quizRisposta(this,true)">Biologico</button>
+        <button onclick="quizRisposta(this,false)">Elettrico</button>
+
+        <p><strong>4. Quale comportamento riduce lo stress e i rischi psicosociali?</strong></p>
+        <button onclick="quizRisposta(this,true)">Gestione equilibrata del lavoro e pause</button>
+        <button onclick="quizRisposta(this,false)">Lavorare più ore senza fermarsi</button>
+
+        <p id="quiz-feedback"></p>
+    </div>
+</section>
+
+<section id="conclusione">
+    <h2>Conclusione</h2>
+    <div class="box">
+        <p>
+            La sicurezza sul lavoro è una <strong>responsabilità di tutti</strong>.
+            Conoscere i rischi permette di prevenirli e di lavorare
+            in modo più sicuro.
+        </p>
+    </div>
+</section>
+
+<footer>
+    <p>Elaborato scolastico – Sicurezza sul Lavoro</p>
+</footer>
+
+<script>
+function toggle(id) {
+    document.getElementById(id).classList.toggle("hidden");
+}
+
+function risposta(ok) {
+    const fb = document.getElementById("feedback");
+    fb.innerHTML = ok
+        ? "✔️ Risposta corretta: la sicurezza protegge le persone."
+        : "❌ Risposta errata: la sicurezza è fondamentale.";
+}
+
+// Quiz finale
+function quizRisposta(btn, correct) {
+    const fb = document.getElementById("quiz-feedback");
+    if(correct) {
+        fb.innerHTML = "✔️ Risposta corretta!";
+        btn.style.background = "#388e3c"; // verde
+    } else {
+        fb.innerHTML = "❌ Risposta sbagliata.";
+        btn.style.background = "#d32f2f"; // rosso
+    }
+}
+</script>
+
+</body>
+</html>
